@@ -19,7 +19,7 @@ Make.CLR<-function(FEATURES, PRIOR, CZM){
   if(missing(PRIOR)){PRIOR=0.5}
 
   if(CZM==TRUE){
-    FEATURES <- t(cmultRepl(t(FEATURES),  label=0, method="CZM", output="counts", suppress.print=T))
+    FEATURES <- t(cmultRepl(t(FEATURES),  label=0, method="CZM", output="p-counts", suppress.print=T))
   } else {
     FEATURES<-FEATURES + PRIOR
   }
